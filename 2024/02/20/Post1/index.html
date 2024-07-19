@@ -63,7 +63,7 @@
         </section>
         <article class="post-content">
         
-            <p><span style="color: red;">*本文尚未完成排版未发现逻辑性缺失故不影响阅读建议心细者先行 </span><span id="more"></span></p>
+            <p><span style="color: red;">*本文尚未完成排版未发现逻辑性缺失故不影响阅读建议心细者先行 </span><span id="more"></span><br><img src="https://www.toplearning.com/images/banner.png"></p>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本教程旨在分享刷机经验和技术知识，帮助读者自行定制设备以更好地满足个人需求。由于该教程的特殊性，任何人都应该了解以下事项：</p>
 <ul>
 <li><p>1.相关风险： <strong>刷机可能引发意外情况，包括但不限于数据丢失、设备故障等</strong>。在阅读本文前，请确保对此充分理解并自愿承担相关风险。</p>
@@ -74,26 +74,32 @@
 </li>
 <li><p>4.相关数据： 由于笔者技术有限，在<strong>第一次刷机时 iEnglish4 学习平板 上的数据将全部丢失</strong>，笔者对此概不负责。</p>
 </li>
+<li><p>5.页内广告：本站目前并未投放广告，本站所有文章中所提供的下载页内出现的任何广告均与本站无关，本站无法对其真实性做出保证，请自行甄别。</p>
+</li>
 </ul>
 <p>在根据此教程进行刷机操作前，请确保已阅读并理解上述声明，并同意自行承担相关风险和责任。</p>
 <h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><ul>
 <li>下载工具集配置电脑（笔记末尾）</li>
 <li>建议配置完环境后重启一次电脑</li>
-<li><del>本文所指</del></li>
 </ul>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>Win10&#x2F;Win11电脑一台（请确保磁盘有足够空间 建议留出10g以上的剩余空间），数据线一根，iEnglish4平板（平板后盖附着进网许可印有“9011”字样）一台</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="Mtk-Universal-解锁工具"><a href="#Mtk-Universal-解锁工具" class="headerlink" title="Mtk Universal 解锁工具"></a>Mtk Universal 解锁工具</h3><p>下载mtk universal v5工具，解bl用，或者你自己有别的解bl工具也行。解压后进入文件夹打开krypton开头的exe，然后点driver install x64安装驱动</p>
-<h3 id="Mtkclient"><a href="#Mtkclient" class="headerlink" title="Mtkclient"></a>Mtkclient</h3><p>下载mtkclient-1.52 并解压缩</p>
-<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>去Python官网下载合适的Python安装包并安装（必须要3.9或以上），记得在安装第一步勾选add to path，或者直接去微软商店里安装Python</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="MTK-UNIVERSAL-解锁工具"><a href="#MTK-UNIVERSAL-解锁工具" class="headerlink" title="MTK_UNIVERSAL 解锁工具"></a>MTK_UNIVERSAL 解锁工具</h3><p>下载MTK_UNIVERSAL工具，用于解锁bootloader，解压后进入文件夹打开krypton开头的exe，然后点击driver install x64&#x2F;x32安装驱动</p>
+<blockquote>
+<p>MTK_UNIVERSAL_V5 : <a target="_blank" rel="noopener" href="https://114514chen.lanzouj.com/iyIrM24j2y7e">蓝奏云下载</a>（下载页内广告与本站无关）</p>
+</blockquote>
+<h3 id="MTKClient"><a href="#MTKClient" class="headerlink" title="MTKClient"></a>MTKClient</h3><p>MTKClient是一个用于MTK逆向和刷写的工具<br>如果你想知道MTKClient的详细用法，可以参考<a target="_blank" rel="noopener" href="https://github.com/bkerler/mtkclient">MTKClient的Github仓库</a><br>在本文中你只需下载MTKClient-1.52 并解压缩</p>
+<blockquote>
+</blockquote>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>在Python官网下载合适的Python安装包并安装（版本要求≥3.9或），记得在安装第一步勾选add to path，或者直接去微软商店里安装Python</p>
 <h3 id="驱动"><a href="#驱动" class="headerlink" title="驱动"></a>驱动</h3><p>下载mtk驱动解压缩并安装，记得一路点允许安装此驱动程序</p>
-<p>建议配置完环境后重启一次电脑</p>
-<h1 id="基础教程"><a href="#基础教程" class="headerlink" title="基础教程"></a>基础教程</h1><h2 id="解bl"><a href="#解bl" class="headerlink" title="解bl"></a>解bl</h2><p>先进入mtk universal v5那个文件夹，打开里面krypton开头的exe，点bootloader unlock，然后点start。这个时候确保平板已经完全关机，然后同时按住音量加减并迅速插线，0.5秒后可以松开按键<br>如果不出意外的话此时bl已经解开。如果工具报错的话就拔下平板并连接充电器，等屏幕上出现电池图标以后拔线。此时平板已经回到完全关机状态，<br>记得关掉工具重新打开然后再试一遍。</p>
-<h2 id="提取system和boot"><a href="#提取system和boot" class="headerlink" title="提取system和boot"></a>提取system和boot</h2><p>打开mtkclient-1.52文件夹，在文件管理器窗口空白处右键，然后点右键菜单里的在此处打开命令窗口，（关于Python：第一次运行需输入</p>
+<p>强烈建议配置完环境后重启一次电脑！</p>
+<h1 id="基础教程"><a href="#基础教程" class="headerlink" title="基础教程"></a>基础教程</h1><h2 id="解锁bootloader"><a href="#解锁bootloader" class="headerlink" title="解锁bootloader"></a>解锁bootloader</h2><p>先进入mtk universal v5那个文件夹，打开里面krypton开头的exe，点bootloader unlock，然后点start。这个时候确保平板已经完全关机，然后同时按住音量加减并迅速插线，0.5秒后可以松开按键<br>如果不出意外的话此时bl已经解开。如果工具报错的话就拔下平板并连接充电器，等屏幕上出现电池图标以后拔线。此时平板已经回到完全关机状态，<br>记得关掉工具重新打开然后再试一遍。</p>
+<h2 id="提取system和boot（可选）"><a href="#提取system和boot（可选）" class="headerlink" title="提取system和boot（可选）"></a>提取system和boot（可选）</h2><p>打开mtkclient-1.52文件夹，在文件管理器窗口空白处右键，然后点右键菜单里的在此处打开命令窗口，（关于Python：第一次运行需输入</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
 <p>并回车然后等待环境安装完成微软商店下载Python的无需执行此步）（关于工具：第一次运行需输入pip3 install -r requirements.txt并回车等待环境安装完成，再进行下一步操作）输入python mtk r system,boot system.img,boot.img<br>并回车，输完指令后像第一步一样按音量上下键同时插线连接平板，等待进度条走完即可成功提取boot和system分区（如果工具报错请尝试重新打开命令窗口或者重启电脑，记得先像第一步里充电让平板回到完全关机）。提取出来的文件在mtkclient-1.52这个文件夹里。</p>
 <h2 id="未命名段落"><a href="#未命名段落" class="headerlink" title="未命名段落"></a>未命名段落</h2><p>下载新系统文件链接：</p>
 <blockquote>
-<p><del><a target="_blank" rel="noopener" href="https://www.123pan.com/s/hXOrVv-v2SK3">https://www.123pan.com/s/hXOrVv-v2SK3</a> 提取码：H5TC4</del><br><a target="_blank" rel="noopener" href="https://www.123pan.com/s/hXOrVv-KnbK3.html">https://www.123pan.com/s/hXOrVv-KnbK3.html</a> 提取码:iEng</p>
+<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/hXOrVv-KnbK3.html">https://www.123pan.com/s/hXOrVv-KnbK3.html</a> 提取码:iEng</p>
 </blockquote>
 <p>刷入新的system.img下载完的系统文件改名<br>system.img将system.img移动到mtkclient-1.52文件夹开始刷入：打开mtkclient-1.52文件夹，在窗口空白处右键，点右键菜单里的在此处打开命令窗口，然后输入python mtk w system system.img然后回车 刷入system分区，输完指令后像第一步一样按音量键同时插线连接平板，等待进度条走完即可（如果工具报错请尝试重新打开命令窗口或者重启电脑，记得先像第一步里充电让平板回到完全关机）。刷完了切记不要马上拔线开机，要先清空所有数据。</p>
 <h1 id="进阶玩机"><a href="#进阶玩机" class="headerlink" title="进阶玩机"></a>进阶玩机</h1><h2 id="1-刷入Magisk获取Root权限"><a href="#1-刷入Magisk获取Root权限" class="headerlink" title="1.刷入Magisk获取Root权限"></a>1.刷入Magisk获取Root权限</h2><h1 id="写在最后的话"><a href="#写在最后的话" class="headerlink" title="写在最后的话"></a>写在最后的话</h1><p>感谢你阅读本篇教程，因技术原因，有一些小问题暂时无法解决<del>（如下未勾选项目），</del>感谢您的理解，<del>如果有任何事也欢迎通过邮箱：@来与我联系！</del></p>
@@ -149,8 +155,8 @@
         </section>
         <section class="sub-footer">
             <p>© 2024 <a href="/">忱铭随笔</a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
-            <a href="https://icp.gov.moe/?keyword=20240669" target="_blank">萌ICP备20240669号</a>
-            <a href="https://ipw.cn/ipv6webcheck/?site=chenming.us.kg" title="本站支持IPv6访问" target='_blank'>本站支持IPv6访问</a>
+            <p><a href="https://icp.gov.moe/?keyword=20240669" target="_blank">萌ICP备20240669号</a></p>
+            <a href="https://ipw.cn/ipv6webcheck/?site=chenming.site" title="本站支持IPv6访问" target='_blank'><img style='display:inline-block;vertical-align:middle' alt="本站支持IPv6访问" src="https://static.ipw.cn/icon/ipv6-s1.svg"></a>
         </section>
     </div>
 </footer>
